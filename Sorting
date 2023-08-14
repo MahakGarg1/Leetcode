@@ -1,4 +1,6 @@
-## Contains Duplicate
+#EASY LEVEL
+
+## 3)Contains Duplicate
  i) Approach -1 
 class Solution {
     public boolean containsDuplicate(int[] nums) {
