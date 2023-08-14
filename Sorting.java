@@ -33,7 +33,7 @@ class Solution {
 }
 
 
-#MEDIUM
+#MEDIUM LEVEL
 1) 3SUM
 class Solution {
 public boolean containsDuplicate(int[] nums) {
@@ -59,7 +59,32 @@ else { r--; }
 return new ArrayList<>(res);
 }
 }	
+		
+2) 3 SUM CLOSET
 	
-	
-
-	
+class Solution {
+public boolean containsDuplicate(int[] nums) {
+Arrays.sort(nums);
+ int res = nums[0] + nums[1]+ nums[2];
+ int mindif = Integer.MAX_VALUE;
+ 
+for(int i =0; i<nums.length-2 ; i++)
+{  int l = i+1;
+   int r =  nums.length -1;
+  while(l < r){
+ int sum = nums[i] + nums[l] + nums[r];
+if (sum == target){
+return target;
+} else if(sum<target)
+{ l++ ;}
+else { r--; }		
+int diftarget = Math.abs(sum-target);
+if(diftarget< mindif){
+res= sum;
+mindif = diftarget;
+ }
+ }
+}
+return res;	  
+}
+}
