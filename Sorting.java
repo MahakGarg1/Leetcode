@@ -34,6 +34,7 @@ class Solution {
 
 
 #MEDIUM LEVEL
+	
 1) 3SUM
 class Solution {
 public boolean containsDuplicate(int[] nums) {
@@ -59,7 +60,8 @@ else { r--; }
 return new ArrayList<>(res);
 }
 }	
-		
+
+
 2) 3 SUM CLOSET
 	
 class Solution {
