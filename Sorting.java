@@ -37,7 +37,8 @@ class Solution {
 	
 1) 3SUM
 class Solution {
-public boolean containsDuplicate(int[] nums) {
+    public List<List<Integer>> threeSum(int[] nums) {
+
 if (nums == null || nums.length < 3)
 {
 return new ArrayList<>(); }
@@ -65,7 +66,8 @@ return new ArrayList<>(res);
 2) 3 SUM CLOSET
 	
 class Solution {
-public boolean containsDuplicate(int[] nums) {
+ public int threeSumClosest(int[] nums, int target) {
+
 Arrays.sort(nums);
  int res = nums[0] + nums[1]+ nums[2];
  int mindif = Integer.MAX_VALUE;
@@ -90,3 +92,23 @@ mindif = diftarget;
 return res;	  
 }
 }
+
+
+# HARD LEVEL
+1) Contains Duplicate III
+	class Solution {
+    public boolean containsNearbyAlmostDuplicate(int[] nums, int indexDiff, int valueDiff) {
+	    int n = nums.length;
+for(int i = 0; i<n; i++){
+for(int j = i+1; j<n; j++){
+if(Math.abs(1L * num[i]-nums[j]) <= valueDiff  && j-i <= indexDiff ){
+return true;
+}
+}
+}
+reture false;
+}
+}
+	    
+
+	
